@@ -15,7 +15,23 @@
     # Windows (Git Bash)
     $ source venv/Scripts/activate
 
-#### 3- Installing Dependencies
+#### 3a- Creating and Installing Dependencies
+    # Install pip-tools
+    $ pip install pip-tools
+
+    # Create requirements.in (already exist)
+    $ touch requirements.in
+
+    # Write dependencies in file
+    $ echo "jupyterlab" > requirements.in
+    
+    # Compile into requirements.txt
+    $ pip-compile requirements.in
+
+    # Install dependencies
+    $ pip install -r requirements.txt
+
+#### 3b- Only Installing Dependencies
     $ pip install -r requirements.txt
 
 #### 4- Starting Jupyter Lab
@@ -27,7 +43,3 @@
 
     # Windows (Git Bash)
     $ venv/Scripts/jupyter-lab
-
-#### Info: Installing Package
-    $ pip install <package>
-    $ pip freeze > requirements.txt
