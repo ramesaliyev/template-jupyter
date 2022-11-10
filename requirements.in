@@ -1,3 +1,5 @@
 jupyterlab
+ipywidgets
+matplotlib
 numpy
 pandas
